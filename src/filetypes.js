@@ -2,6 +2,7 @@
 
 const classRegex = /class=["|']([\w- ]*$)/
 const classNameRegex = /className=["|']([\w- ]*$)/
+const classNameJsRegex = /className:["|']([\w- ]*$)/
 const applyRegex = /@apply ([\.\w- ]*$)/
 const emmetRegex = /(?=\.)([\w-\. ]*$)/
 
@@ -12,6 +13,10 @@ const jsPatterns = [
   },
   {
     regex: classNameRegex,
+    splitCharacter: ' '
+  },
+  {
+    regex: classNameJsRegex,
     splitCharacter: ' '
   },
   {
